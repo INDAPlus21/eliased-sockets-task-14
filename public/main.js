@@ -89,7 +89,7 @@ var textarea = document.getElementById("main_input");
 
 textarea.oninput = function () {
     console.log(textarea.scrollHeight)
-    if (textarea.scrollHeight - 33 % 19 && (textarea.rows - 1) * 19 + 33 != textarea.scrollHeight) {
+    if ((textarea.scrollHeight - 33 % 19) == 0 && (textarea.rows - 1) * 19 + 33 != textarea.scrollHeight) {
         textarea.rows += 1
     }
     // console.log(textarea.style.height)
