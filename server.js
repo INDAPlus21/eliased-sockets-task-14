@@ -48,7 +48,7 @@ var connections = []
 
 ws.on('connection', function connection(wsConnection) {
     logger.info("connected")
-    var is_bot = Math.random() < 0.5;
+    var is_bot = true //Math.random() < 0.5;
     connections.push([wsConnection, is_bot])
     logger.info("is_bot: ", is_bot)
     // var is_bot = true
@@ -86,13 +86,6 @@ ws.on('connection', function connection(wsConnection) {
 // or rotate through different AIs, because they very often provide the same response (it's a hack!)
 // this could be a research study of what ais are most convincing, and their progression over the years 
 
-/* var options = {
-    headers: {
-        {Authorization: f"Bearer {'rgsmKeotnqfZUwUTIgGGBfIdhursJSTEigZAfMKqjYlWddLcxQuQAtMetfEXzVVgaQlbTQOPmSALOmvkbbCLEXNYlqGqXXZvrgouFrNdUlxUNyRmWCzoZsZeFNTWiwty'}"}
-    }
-
-} */
-
 async function getBotResponse(past_user_inputs, generated_responses, text) {
     return new Promise(function (resolve, reject) {
 
@@ -119,11 +112,8 @@ async function getBotResponse(past_user_inputs, generated_responses, text) {
 
 // https://api-inference.huggingface.co/models/facebook/blenderbot-3B
 // https://api-inference.huggingface.co/models/facebook/blenderbot-400M-distill
-
 // https://api-inference.huggingface.co/models/microsoft/DialoGPT-large
-
 // var gpt_res = await axios.post('https://api-inference.huggingface.co/models/microsoft/DialoGPT-large', options);
-
 // logger.info(gpt_res)
 
 const http = require("http");
