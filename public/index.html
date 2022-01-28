@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>The Turing Test</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="icon.png" />
+</head>
+<body>
+    <br>
+    <h1>The Turing Test</h1>
+    <p>You're either paired up with a bot or a human, and have 60 seconds to find out if your opponent is made of flesh and blood. You can answer any time, and get more points the faster you are.<br></br> Your *potentially* human opponent is tasked with the same thing, and you get bonus points if you simultanously can convince them that you're non-human.</p>
+    <!--<img height=100px 
+    src="icon.png">-->
+    <br>
+    <div id="app"></div>
+    <br></br>
+    <div id="main">
+        <div id="messages"></div>
+        <textarea id="main_input" autofocus rows="1"
+            class="message"></textarea>
+        <i id="airplane" class="fas fa-paper-plane" onclick="sendMessage()"></i>
+    </div>
+    <button id="is_bot" onclick="isBot(true)">Is a bot</button>
+    <button id="is_human" onclick="isBot(false)">Is human</button>
+    <script src="main.js"></script>
+    <script src="timer.js"></script>
+</body>
+
+</html>
